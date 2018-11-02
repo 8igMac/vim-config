@@ -9,6 +9,7 @@ This is my vim config file.
     - [Basic](#basic)
     - [Plugin Related](#plugin-related)
     - [Tab Related](#tab-related)
+- [Color Scheme](#color-scheme)
     
 ## How to Install
 1. Clone the repository to where you want to put the .vim directory.
@@ -57,3 +58,8 @@ Comment multiple line with simple key-stroke.
 - `\`+`tc`: close current tab
 - `\`+`tm`: move tab
 - `\\`: next tag 
+
+## Color Scheme
+I pick several nice color schemes, you can select one you like in `vimrc` file.
+Just uncomment the one you like and save&exit. 
+> Use `F5` to see the changes.
