@@ -42,7 +42,7 @@ Comment multiple line with simple key-stroke.
 ## Hotkeys
 ### Basic
 - `F5`: reload vimrc
-- `jj`: alice for <esc>
+- `jj`: alice for `esc`
 - `Ctrl-l/h/i/j`: easy window navigation
 - `J`: scroll down
 - `K`: scroll up
