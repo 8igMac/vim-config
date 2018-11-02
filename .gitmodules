@@ -13,3 +13,9 @@
 [submodule "bundle/tcomment_vim"]
 	path = bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/vim-autocomplpop"]
+	path = bundle/vim-autocomplpop
+	url = https://github.com/othree/vim-autocomplpop.git
+[submodule "bundle/L9"]
+	path = bundle/L9
+	url = https://github.com/vim-scripts/L9.git
