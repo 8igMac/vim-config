@@ -38,8 +38,6 @@ Easy browsing tag in current file, and get an overview of
 the file structure.
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim):
 Comment multiple line with simple key-stroke.
-- [supertab](https://github.com/ervandew/supertab): 
-Enable using `tab` to auto-complete words your are typing.
 
 ## Hotkeys
 ### Basic
