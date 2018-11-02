@@ -1,5 +1,13 @@
 Use vim like an IDE
 ===
+This is my vim config file.
+
+### Table of Content
+- [Installed Plugins](#install-plugins)
+- [Hotkeys](#hotkeys)
+    - [Basic](#basic)
+    - [Plugin Related](#plugin-related)
+    - [Tab Related](#tab-related)
 
 ## Installed Plugins
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
@@ -22,7 +30,7 @@ Comment multiple line with simple key-stroke.
 - `J`: scroll down
 - `K`: scroll up
 
-### Plugins Related
+### Plugin Related
 - `Ctrl-n`: NerdTree toggle
 - `F8`: Tagbar toggle
 - `gc`: toggle comment (visual mode to select target)
