@@ -3,11 +3,27 @@ Use vim like an IDE
 This is my vim config file.
 
 ### Table of Content
+- [How to Install](#how-to-install)
 - [Installed Plugins](#installed-plugins)
 - [Hotkeys](#hotkeys)
     - [Basic](#basic)
     - [Plugin Related](#plugin-related)
     - [Tab Related](#tab-related)
+    
+## How to Install
+1. Clone the repository to where you want to put the .vim directory.
+```
+$ git clone --depth=1 GIT_URL
+```
+2. Change directory name to `.vim`.
+```
+$ mv vim-config .vim
+```
+3. Get plugins.
+```
+$ git submodule update --init --recursive --depth=1
+```
+4. You're done, enjoy vim.
 
 ## Installed Plugins
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
