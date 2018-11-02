@@ -14,7 +14,7 @@ This is my vim config file.
 ## How to Install
 1. Clone the repository to where you want to put the .vim directory.
 ```
-$ git clone --depth=1 GIT_URL
+$ git clone GIT_URL
 ```
 2. Change directory name to `.vim`.
 ```
@@ -22,7 +22,7 @@ $ mv vim-config .vim
 ```
 3. Get plugins.
 ```
-$ git submodule update --init --recursive --depth=1
+$ git submodule update --init
 ```
 4. You're done, enjoy vim.
 
