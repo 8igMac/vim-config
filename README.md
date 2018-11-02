@@ -38,7 +38,7 @@ Easy browsing tag in current file, and get an overview of
 the file structure.
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim):
 Comment multiple line with simple key-stroke.
-- [vim-autocomplpop](https://github.com/ervandew/vim-autocomplpop):
+- [vim-autocomplpop](https://github.com/othree/vim-autocomplpop):
 Auto-complete words that you're typing. 
 (dependency: [vim-scripts/L9](https://github.com/vim-scripts/L9))
 
