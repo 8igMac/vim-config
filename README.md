@@ -3,7 +3,7 @@ Use vim like an IDE
 This is my vim config file.
 
 ### Table of Content
-- [Installed Plugins](#install-plugins)
+- [Installed Plugins](#installed-plugins)
 - [Hotkeys](#hotkeys)
     - [Basic](#basic)
     - [Plugin Related](#plugin-related)
