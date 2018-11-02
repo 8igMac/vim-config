@@ -80,8 +80,8 @@ nnoremap <C-i> <C-W>i
 nnoremap <C-j> <C-W>j
 
 " Scrolling
-nnoremap J 5<C-e>M
-nnoremap K 5<C-y>M
+nnoremap J 5<C-e>5j
+nnoremap K 5<C-y>5k
 
 " Managing tab
 nnoremap <leader>tn :tabnew<cr>
