@@ -76,7 +76,7 @@ nnoremap <F5> :source $MYVIMRC<CR>
 " Window navigation
 nnoremap <C-l> <C-W>l
 nnoremap <C-h> <C-W>h
-nnoremap <C-i> <C-W>i
+nnoremap <C-k> <C-W>k
 nnoremap <C-j> <C-W>j
 
 " Scrolling
