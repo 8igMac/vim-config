@@ -41,6 +41,10 @@ Comment multiple line with simple key-stroke.
 - [vim-autocomplpop](https://github.com/othree/vim-autocomplpop):
 Auto-complete words that you're typing. 
 (dependency: [vim-scripts/L9](https://github.com/vim-scripts/L9))
+- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim):
+A fuzzy file finder
+- [fugitive](https://github.com/tpope/vim-fugitive):
+A git tool
 
 ## Hotkeys
 ### Basic
@@ -54,6 +58,7 @@ Auto-complete words that you're typing.
 - `Ctrl-n`: NerdTree toggle
 - `F8`: Tagbar toggle
 - `gc`: toggle comment (visual mode to select target)
+- `Ctrl-p`: invoke fuzzy file finder
 
 ### Tab Related
 - `\`+`tn`: new tab
