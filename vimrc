@@ -58,6 +58,13 @@ let g:NERDTreeWinPos = "right"
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
+"""""""""""""""""""
+" Tagbar Config 
+"""""""""""""""""""
+" Sort tag by order on default
+let g:tagbar_sort = 0
+
+
 """""""""""
 " Hot keys
 """""""""""
