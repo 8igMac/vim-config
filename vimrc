@@ -69,7 +69,9 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - check |netrw-browse-maps| for more mappings
 
 " Set relative number
-set number relativenumber
+set number
+autocmd InsertEnter * :set relativenumber
+autocmd InsertLeave * :set norelativenumber
 
 " Set cursorline
 set cursorline
