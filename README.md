@@ -1,73 +1,107 @@
-Use vim like an IDE
-===
-This is my vim config file.
+# Vim Tips
+## Cheatsheet
+- @: repeat command
 
-### Table of Content
-- [How to Install](#how-to-install)
-- [Installed Plugins](#installed-plugins)
-- [Hotkeys](#hotkeys)
-    - [Basic](#basic)
-    - [Plugin Related](#plugin-related)
-    - [Tab Related](#tab-related)
-- [Color Scheme](#color-scheme)
-    
-## How to Install
-1. Clone the repository to where you want to put the .vim directory.
-```
-$ git clone GIT_URL
-```
-2. Change directory name to `.vim`.
-```
-$ mv vim-config .vim
-```
-3. Get plugins.
-```
-$ git submodule update --init
-```
-4. You're done, enjoy vim.
+## The Vim Language
+[counts] [operation] [text object / motion]
+- operations
+    - c/d/y change/delete/yank
+    - gu/gU make lowercase/uppercase
+    - \>/< shift
+    - ~ swap case
+    - = indent
+    - ! filter to external program
+- text objects
+    - aw/iw word
+    - aW/iW WORD
+    - ap/ip paragraph
+    - ab/ib bracket
+    - at/it tag
+- motions
+    - w/W
+    - b/B
+    - e/E
+    - ]m begining of a method
+    - f/F {char} next/prev occurence of char
+    - t/T {char} till occurence of char
+    - % go to first matching parent bracket
+    - + go to first non-blank character of line
 
-## Installed Plugins
-- [auto-pairs](https://github.com/jiangmiao/auto-pairs):
-Auto pairing for "()", "[]" etc.
-- [nerdtree](https://github.com/scrooloose/nerdtree):
-A file system explorer in vim.
-- [syntastic](https://github.com/vim-syntastic/syntastic):
-Check syntax error for you when you save the file. 
-- [tagbar](https://github.com/majutsushi/tagbar):
-Easy browsing tag in current file, and get an overview of
-the file structure.
-- [tcomment_vim](https://github.com/tomtom/tcomment_vim):
-Comment multiple line with simple key-stroke.
-- [vim-autocomplpop](https://github.com/othree/vim-autocomplpop):
-Auto-complete words that you're typing. 
-(dependency: [vim-scripts/L9](https://github.com/vim-scripts/L9))
-- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim):
-A fuzzy file finder
-- [fugitive](https://github.com/tpope/vim-fugitive):
-A git tool
+## Advance Navigation
+- various motions
+	- H, M, L cursor go high/middle/low
+	- zz, zt, zb screen go middle/top/bottom
+	- ^u/^d up/down a half page
+    - ^y/^e up/down screen
+    - ^b/^f up/down a page
+- editing
+    - :e {filename} edit a file
+    - :fin {filename} find a file
+    - gf go to file path under cursor
+    - ctrl-^ previous file
+- searches
+    - * search forward for word under cursor
+    - gd go to local declaration (first appearence)
+    - /<CR> search for last used pattern
+- marks
+    - :marks show all the marks
+    - mA make mark A
+    - 'A go to mark A
+- tags (require ctags)
+    - :MakeTags make tags
+    - ^] jump to tag under cursor
+    - g^] for ambiguous tags
+    - ^t jump back the tag stack
+- jumplist and changelist
+    - ^o/^i next/prev jump
+    - g;/g, next/prev change
 
-## Hotkeys
-### Basic
-- `F5`: reload vimrc
-- `jj`: alice for `esc`
-- `Ctrl-l/h/i/j`: easy window navigation
-- `J`: scroll down
-- `K`: scroll up
+## Buffers, Windows, Tabs Management
+### Buffer is for viewing most of the file
+- see [Advance Navigation / editing]
+- :buffers show all the buffer
+- :bd NUMBER delete buffer
+- :bn/:bp go to next/prev buffer
+- :bufdo {cmd} exec cmd for all buffer
 
-### Plugin Related
-- `Ctrl-n`: NerdTree toggle
-- `F8`: Tagbar toggle
-- `gc`: toggle comment (visual mode to select target)
-- `Ctrl-p`: invoke fuzzy file finder
+### Argment List
+- :args list arguments
+- :n go to next file in args
+- :arga {filename} add file to args
+- :vert sall vertically split all args
 
-### Tab Related
-- `\`+`tn`: new tab
-- `\`+`to`: tab only (close other tab except current)
-- `\`+`tc`: close current tab
-- `\`+`tm`: move tab
-- `\\`: next tag 
+### Window
+- ^wo only this window
+- :vert sf FILE vertical split find file (san francisco!!)
+- ^wx switch window focus
+- :windo difft all windows do diff
 
-## Color Scheme
-I pick several nice color schemes, you can select one you like in `vimrc` file.
-Just uncomment the one you like and save&exit. 
-> Use `F5` to see the changes.
+### Tab for saving window configuration
+- gt go to next tab
+- gT go to prev tab
+- :tabf FILE find file and open in new tab
+
+## Terminal (vim8+)
+- :term open terminal
+- :vert term open verical termianl
+- :term ++rows=5 open terminal with 5 rows
+
+## Auto Complete
+- ^x^n for JUST this file
+- ^x^f for filenames (work with our path tricks!)
+- ^x^] for tags only
+- ^n or tab for anything specified by the 'complete' option
+- Use ^p and ^n/tab to go back and forth in the suggestion list
+
+## Build-in Project Navigator: newtr
+- :35vs . open dir tree in 35 pixel
+- <CR>/v/t to open in an h-split/v-split/tab
+- p to preview and ^wz to close
+- gh toggle hidden
+- check |netrw-browse-maps| for more mappings
+
+## Vim gprep
+- :vim /PATTERN/ % vim grep pattern in current file
+- :vim /PATTERN/ ## in all args files
+- :cn/:cp to navigate next/prev
+- :cdo s/aaa/bbb/g change all grep
