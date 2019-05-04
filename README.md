@@ -1,6 +1,9 @@
 # Vim Tips
 ## Cheatsheet
 - @: repeat command
+- history
+    - q: view and pick command history
+    - q/ view and pick searche history
 
 ## The Vim Language
 [counts] [operation] [text object / motion]
@@ -97,6 +100,7 @@
 - :35vs . open dir tree in 35 pixel
 - <CR>/v/t to open in an h-split/v-split/tab
 - p to preview and ^wz to close
+- D to remove files or directories
 - gh toggle hidden
 - check |netrw-browse-maps| for more mappings
 
