@@ -38,8 +38,8 @@ color molokai
 """""""""""
 " Refresh vimrc
 nnoremap <F5> :so $MYVIMRC<CR>
-" Open dir tree of current dir
-nnoremap <C-n> :25vs .<CR>  
+" Toggle dir tree on the side pane
+nnoremap <C-n> :Lexplore<CR>  
 " TagBar Toggle
 nnoremap <F8> :TagbarToggle<CR>
 " Replace <esc> with "jj"
@@ -48,14 +48,20 @@ inoremap jj <esc>
 vnoremap <C-c> "*y :let @+=@*<CR>
 " Past from clipboard
 noremap <C-p> "+P
+" Show buffers
+nnoremap sb :buffers<CR>
+" Toggle relative number
+nnoremap tn :set number relativenumber!<CR>
+" Execute visual block in py3
+vnoremap <silent> <leader>[ :w ! python3<CR>
+" Execute all in py3
+nnoremap <silent> <leader>[[ :%w ! python3<CR>
 
 """""""""""""""
 " Abbreviation
 """""""""""""""
 " Open help in tab
 :cabbrev h tab help
-" Toggle relative number
-:cabbrev tn set number relativenumber!
 
 """""""""""""""
 " Auto command
@@ -89,5 +95,6 @@ let g:netrw_banner=0        " disable annoying banner
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
+let g:netrw_winsize=17      " window size
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'

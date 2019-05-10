@@ -4,6 +4,22 @@
 - history
     - q: view and pick command history
     - q/ view and pick searche history
+- buy one get one free
+    - C == c$
+    - D == d$
+    - A == $a
+    - I 
+    - S
+    - o == a <CR>
+    - O == k o
+- resize height
+    - :res +5/-5
+    - :res 60
+- resize width
+    - :vert res +5
+- fold
+    - zf make fold
+    - za fold toggle
 
 ## The Vim Language
 [counts] [operation] [text object / motion]
@@ -97,11 +113,12 @@
 - Use ^p and ^n/tab to go back and forth in the suggestion list
 
 ## Build-in Project Navigator: newtr
-- :35vs . open dir tree in 35 pixel
+- :10Vexplore open current dir in left v-split 10 pixel
 - <CR>/v/t to open in an h-split/v-split/tab
 - p to preview and ^wz to close
 - D to remove files or directories
 - gh toggle hidden
+- R rename file/dir
 - check |netrw-browse-maps| for more mappings
 
 ## Vim gprep
