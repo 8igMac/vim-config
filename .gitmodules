@@ -16,3 +16,6 @@
 [submodule "bundle/vim-solidity"]
 	path = bundle/vim-solidity
     url = https://github.com/tomlion/vim-solidity.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

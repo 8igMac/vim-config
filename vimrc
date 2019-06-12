@@ -7,7 +7,7 @@ set nocompatible "No compatible for vi
 set hidden "Allow switching buffer without writing to disk
 set noswapfile "No swap files
 
-set relativenumber "Relative line numbers
+set number relativenumber "Relative line numbers
 set cursorline "Enable cursorline
 set mouse=iv "Enable mouse scroll in visual and insert mode
 
@@ -36,8 +36,6 @@ color molokai
 """""""""""
 " Hot keys
 """""""""""
-" Refresh vimrc
-nnoremap <F5> :so $MYVIMRC<CR>
 " Toggle dir tree on the side pane
 nnoremap <C-n> :Lexplore<CR>  
 " TagBar Toggle
@@ -56,6 +54,8 @@ nnoremap tn :set number relativenumber!<CR>
 vnoremap <silent> <leader>[ :w ! python3<CR>
 " Execute all in py3
 nnoremap <silent> <leader>[[ :%w ! python3<CR>
+" NerdTree, the file system explorer
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 """""""""""""""
 " Abbreviation
@@ -68,9 +68,10 @@ nnoremap <silent> <leader>[[ :%w ! python3<CR>
 """""""""""""""
 "Auto change dir with file
 autocmd BufEnter * silent! lcd %:p:h 
-" Per default, netrw leaves unmodified buffers open. This autocommand
-" deletes netrw's buffer once it's hidden (using ':q', for example)
-autocmd FileType netrw setl bufhidden=delete
+" Reload vimrc on every save to vimrc
+autocmd BufWritePost vimrc so %
+" Close vim when exit on only one window 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Fuzzy file finder in subdir under root dir
@@ -87,14 +88,3 @@ command! MakeTags !ctags -R .
 " - Use ^] to jump to tag under cursor
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
-
-""""""""""""""""""""""""
-" File Browsing: netrw	
-""""""""""""""""""""""""
-let g:netrw_banner=0        " disable annoying banner
-let g:netrw_browse_split=4  " open in prior window
-let g:netrw_altv=1          " open splits to the right
-let g:netrw_liststyle=3     " tree view
-let g:netrw_winsize=17      " window size
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'

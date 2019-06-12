@@ -98,12 +98,17 @@
 ### Tab for saving window configuration
 - gt go to next tab
 - gT go to prev tab
+- {i}gt go to i-th tab
 - :tabf FILE find file and open in new tab
 
 ## Terminal (vim8+)
-- :term open terminal
-- :vert term open verical termianl
-- :term ++rows=5 open terminal with 5 rows
+- :ter open terminal
+- :vert ter open verical termianl
+- :ter ++rows=5 open terminal with 5 rows
+- while you are in the terminal
+    - ^w to enter any vim command
+        - ex: if you open term in tab, ^wgt to navigate
+    - ^wN enter terminal-normal mode (you can scroll with vim key)
 
 ## Auto Complete
 - ^x^n for JUST this file
